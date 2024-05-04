@@ -3,6 +3,7 @@ package com.example.user_profile_db;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     EditText userID, userName, userPass;
-    Button save, search, edit, delete;
+    Button save, search, edit, delete, list;
     MyDatabase myDatabase;
     Cursor mycursor;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
         search=(Button) findViewById(R.id.btnSearch);
         edit=(Button) findViewById(R.id.btnEdit);
         delete=(Button) findViewById(R.id.btnDelete);
+        list=(Button) findViewById(R.id.btnList);
         myDatabase =new MyDatabase(this);
 
 
@@ -90,6 +92,14 @@ public class MainActivity extends AppCompatActivity {
                 }
 
         });
+        list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity.this, User_List.class);
+                startActivity(intent);
+            }
+        });
+
 
 
 

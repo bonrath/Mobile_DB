@@ -66,11 +66,13 @@ public class MyDatabase extends SQLiteOpenHelper {
 
     public Cursor GetAllUser(){
         SQLiteDatabase db=this.getReadableDatabase();
-        Cursor myCursor=db.rawQuery("Select * From User ",null);
+        Cursor myCursor=db.rawQuery("SELECT * FROM User ",null);
         myCursor.moveToFirst();
         return myCursor;
 
     }
+
+
 
 
 

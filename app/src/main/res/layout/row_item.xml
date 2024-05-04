@@ -8,6 +8,7 @@
 
     <TextView
         android:id="@+id/txtId"
+        android:text="id"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -15,7 +16,8 @@
 
         />
     <TextView
-        android:id="@+id/txtName"
+        android:id="@+id/txtUname"
+        android:text="name"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
@@ -24,6 +26,7 @@
         />
     <TextView
         android:id="@+id/txtPass"
+        android:text="password"
         android:layout_width="140dp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
